@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renan Rodrigues | Desenvolvedor Full Stack</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav-container">
+        <div class="logo">RR</div>
+        <ul class="nav-links">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1 class="hero-title">Renan Rodrigues</h1>
+        <p class="hero-subtitle">Desenvolvedor Full Stack</p>
+        <p class="hero-description">
+          Especializado em Java e Python com mais de 3 anos de experiência.
+          Criando soluções completas com foco em performance, qualidade e boas
+          práticas.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-envelope"></i>
+            Entre em Contato
+          </a>
+          <a href="#about" class="btn btn-secondary">
+            <i class="fas fa-user"></i>
+            Conheça mais
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <h2 class="section-title fade-in">Sobre Mim</h2>
+      <div class="about-content fade-in">
+        <div class="about-image">
+          <div class="profile-img floating">
+            <i class="fas fa-code"></i>
+          </div>
+        </div>
+        <div class="about-text">
+          <h3>Desenvolvedor Full Stack Especializado em IA e Automação</h3>
+          <p>
+            Desenvolvedor Full Stack com foco em Java e Python, especializado no
+            desenvolvimento de soluções completas que envolvem back-end robusto
+            (REST APIs, automações, machine learning) e front-end intuitivo
+            (Vue.js e React Native). Com mais de 3 anos de experiência prática
+            em versionamento Git e frameworks modernos.
+          </p>
+          <p>
+            Atualmente trabalho como Software Developer na VJBots, onde
+            desenvolvo soluções avançadas incluindo
+            <strong>modelos de CNN (Convolutional Neural Network)</strong> para
+            classificação de carcaças bovinas utilizando PyTorch, TensorFlow e
+            Keras, além de implementações com YOLOv8 (Ultralytics) para
+            identificação de humanos e objetos. Minha expertise inclui o
+            desenvolvimento completo desde o levantamento de requisitos até o
+            deploy em produção.
+          </p>
+          <p>
+            No desenvolvimento back-end, tenho experiência sólida com JPA, JSF,
+            PrimeFaces, JSP, Java Servlets, Hibernate, criação de scrapers e
+            automações via Selenium e Playwright. Também trabalho extensivamente
+            com análise de dados usando Pandas e frameworks de Deep Learning
+            como PyTorch, TensorFlow e Scikit-learn.
+          </p>
+          <p>
+            Sou movido por desafios reais, com foco em código limpo, testes
+            automatizados e aprendizado contínuo. Valorizo a colaboração em
+            equipe, organização e desenvolvimento de soluções escaláveis e bem
+            estruturadas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <h2 class="section-title fade-in">Habilidades Técnicas</h2>
+      <div class="skills-grid">
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-code"></i> Linguagens</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">C++</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-laptop-code"></i> Front-end</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">React Native</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">Expo</span>
+            <span class="skill-tag">Axios</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-server"></i> Back-end</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-database"></i> Banco de Dados</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">JPA</span>
+            <span class="skill-tag">SQLAlchemy</span>
+            <span class="skill-tag">JDBC</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-brain"></i> Machine Learning & IA</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Keras</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">YOLOv8</span>
+            <span class="skill-tag">CNN</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Matplotlib</span>
+            <span class="skill-tag">Ultralytics</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3>
+            <i class="fas fa-exchange-alt"></i> Mensageria & Microserviços
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">RabbitMQ</span>
+            <span class="skill-tag">Pika</span>
+            <span class="skill-tag">Message Queues</span>
+            <span class="skill-tag">Event-Driven Architecture</span>
+            <span class="skill-tag">Microserviços</span>
+            <span class="skill-tag">REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-server"></i> Back-end Avançado</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">RabbitMQ</span>
+            <span class="skill-tag">Pika</span>
+            <span class="skill-tag">JSF</span>
+            <span class="skill-tag">PrimeFaces</span>
+            <span class="skill-tag">JSP</span>
+            <span class="skill-tag">Servlets</span>
+            <span class="skill-tag">Hibernate</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-robot"></i> Automação & Testes</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Selenium</span>
+            <span class="skill-tag">Playwright</span>
+            <span class="skill-tag">JUnit</span>
+            <span class="skill-tag">PyTest</span>
+            <span class="skill-tag">Robot Framework</span>
+            <span class="skill-tag">Jest</span>
+            <span class="skill-tag">Web Scraping</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-tools"></i> DevOps & Testes</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">Nginx</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">JUnit</span>
+            <span class="skill-tag">PyTest</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+      <h2 class="section-title fade-in">Experiência Profissional</h2>
+
+      <div class="experience-item fade-in">
+        <div class="experience-header">
+          <div>
+            <h3 class="experience-title">Software Developer</h3>
+            <p class="experience-company">VJBots</p>
+          </div>
+          <span class="experience-period">Atual</span>
+        </div>
+        <div class="experience-description">
+          <p>
+            Desenvolvimento de soluções completas em Python e Java, com foco em
+            automação de processos, análise de dados e
+            <strong>inteligência artificial aplicada ao agronegócio</strong>.
+          </p>
+          <ul>
+            <li>
+              <strong>Desenvolvimento de modelo CNN</strong> para classificação
+              de carcaças bovinas utilizando PyTorch, TensorFlow e Keras
+            </li>
+            <li>
+              <strong>Implementação de YOLOv8 (Ultralytics)</strong> para
+              detecção e identificação de humanos e objetos em tempo real
+            </li>
+            <li>
+              Criação e manutenção de APIs RESTful com Flask, FastAPI e Spring
+              Boot
+            </li>
+            <li>
+              Implementação de sistemas de mensageria com RabbitMQ (Pika) para
+              comunicação assíncrona entre microserviços
+            </li>
+            <li>
+              Desenvolvimento de scrapers e automações com Selenium e Playwright
+            </li>
+            <li>
+              Levantamento de requisitos e modelagem de software utilizando UML
+            </li>
+            <li>
+              Refatoração de sistemas legados com JPA, JSF, PrimeFaces, JSP e
+              Hibernate
+            </li>
+            <li>
+              Análise de dados com Pandas e visualizações para insights de
+              negócio
+            </li>
+            <li>
+              Deploy de aplicações em servidores Linux (VPS) com Nginx, SSL e
+              automações shell
+            </li>
+            <li>
+              Implementação de pipelines CI/CD com GitHub Actions e Docker
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item fade-in">
+        <div class="experience-header">
+          <div>
+            <h3 class="experience-title">Projetos Acadêmicos Avançados</h3>
+            <p class="experience-company">Faculdade Eduvale</p>
+          </div>
+          <span class="experience-period">2022 - Atual</span>
+        </div>
+        <div class="experience-description">
+          <p>
+            Desenvolvimento de projetos acadêmicos complexos aplicando
+            conhecimentos avançados em desenvolvimento full-stack, inteligência
+            artificial e engenharia de software.
+          </p>
+          <ul>
+            <li>
+              <strong>APIs REST avançadas</strong> em Node.js com Express,
+              autenticação JWT e integração com MySQL2
+            </li>
+            <li>
+              <strong>Sistemas Web empresariais</strong> em Java com Spring
+              Boot, JPA, JSF e padrões arquiteturais MVC
+            </li>
+            <li>
+              <strong>Aplicações móveis híbridas</strong> com React Native, Expo
+              e expo-camera para captura e processamento de imagens
+            </li>
+            <li>
+              <strong>Projetos de Machine Learning</strong> com PyTorch e
+              TensorFlow para classificação e análise preditiva
+            </li>
+            <li>
+              <strong>Automações web</strong> com Selenium e Playwright para
+              testes automatizados e coleta de dados
+            </li>
+            <li>
+              <strong>Consumo de APIs externas</strong> com Axios em Vue.js e
+              React Native
+            </li>
+            <li>
+              <strong>Testes automatizados</strong> unitários e de integração
+              com JUnit, PyTest e Jest
+            </li>
+            <li>
+              <strong>Análise de dados</strong> com Pandas, NumPy e Matplotlib
+              para insights estatísticos
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <h2 class="section-title fade-in">Vamos Conversar</h2>
+      <div class="contact-content">
+        <div class="contact-info fade-in">
+          <h3 style="color: var(--text-primary); margin-bottom: 2rem">
+            Informações de Contato
+          </h3>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p>
+                <a href="mailto:renanrodrigues7110@gmail.com"
+                  >renanrodrigues7110@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Telefone</h4>
+              <p><a href="tel:+5519998722472">(19) 99872-2472</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Localização</h4>
+              <p>Itaí, SP - Brasil</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="contact-details">
+              <h4>LinkedIn</h4>
+              <p>
+                <a
+                  href="https://linkedin.com/in/renanrodrigues7110"
+                  target="_blank"
+                  >linkedin.com/in/renanrodrigues7110</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="contact-details">
+              <h4>GitHub</h4>
+              <p>
+                <a href="https://github.com/Renan-RodriguesDEV" target="_blank"
+                  >github.com/Renan-RodriguesDEV</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form fade-in">
+          <h3 style="color: var(--text-primary); margin-bottom: 2rem">
+            Envie uma Mensagem
+          </h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Assunto</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="social-links">
+          <a
+            href="https://github.com/Renan-RodriguesDEV"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/renanrodrigues7110"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:renanrodrigues7110@gmail.com" class="social-link">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+5519998722472" class="social-link">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.9rem">
+          © 2025 Renan Rodrigues. Desenvolvido com ❤️ e JavaScript vanilla.
+        </p>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
