@@ -12,14 +12,19 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Navbar scroll effect
+// Navbar scroll effect com melhor performance
+let navScrollTimeout;
 window.addEventListener("scroll", () => {
   const nav = document.getElementById("nav");
-  if (window.scrollY > 50) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
-  }
+  clearTimeout(navScrollTimeout);
+
+  navScrollTimeout = setTimeout(() => {
+    if (window.scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  }, 10);
 });
 
 // Scroll progress indicator
@@ -33,7 +38,7 @@ window.addEventListener("scroll", () => {
   scrollProgress.style.width = scrollPercentRounded + "%";
 });
 
-// Fade in animation on scroll
+// Fade in animation on scroll com Intersection Observer otimizado
 const observerOptions = {
   threshold: 0.1,
   rootMargin: "0px 0px -50px 0px",
@@ -43,6 +48,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
@@ -51,34 +57,39 @@ document.querySelectorAll(".fade-in").forEach((el) => {
   observer.observe(el);
 });
 
-// Contact form handling
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+// Contact form handling melhorado
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const formData = new FormData(this);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const subject = formData.get("subject");
-  const message = formData.get("message");
+    const formData = new FormData(this);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const subject = formData.get("subject");
+    const message = formData.get("message");
 
-  // Create mailto link
-  const mailtoLink = `mailto:renanrodrigues7110@gmail.com?subject=${encodeURIComponent(
-    subject
-  )}&body=${encodeURIComponent(
-    `Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`
-  )}`;
+    // Create mailto link
+    const mailtoLink = `mailto:renanrodrigues7110@gmail.com?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(
+      `Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`,
+    )}`;
 
-  // Open email client
-  window.location.href = mailtoLink;
+    // Open email client
+    window.location.href = mailtoLink;
 
-  // Show success message
-  alert("Redirecionando para seu cliente de email...");
+    // Show success message
+    setTimeout(() => {
+      alert("Redirecionando para seu cliente de email...");
+    }, 500);
 
-  // Reset form
-  this.reset();
-});
+    // Reset form
+    this.reset();
+  });
+}
 
-// Typing effect for hero title
+// Typing effect for hero title aprimorado
 function typeWriter(element, text, speed = 100) {
   let i = 0;
   element.innerHTML = "";
@@ -102,13 +113,16 @@ window.addEventListener("load", () => {
   }
 });
 
-// Mobile menu toggle (basic implementation)
+// Mobile menu toggle
 const mobileMenu = document.querySelector(".mobile-menu");
 const navLinks = document.querySelector(".nav-links");
 
-mobileMenu.addEventListener("click", () => {
-  navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
-});
+if (mobileMenu) {
+  mobileMenu.addEventListener("click", () => {
+    navLinks.style.display =
+      navLinks.style.display === "flex" ? "none" : "flex";
+  });
+}
 
 // Parallax effect for hero section
 window.addEventListener("scroll", () => {
@@ -119,10 +133,10 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Add hover effects to skill tags
+// Add hover effects to skill tags com melhor performance
 document.querySelectorAll(".skill-tag").forEach((tag) => {
   tag.addEventListener("mouseenter", function () {
-    this.style.transform = "scale(1.05)";
+    this.style.transform = "scale(1.08)";
     this.style.transition = "transform 0.2s ease";
   });
 
@@ -141,19 +155,21 @@ document.querySelectorAll(".btn").forEach((button) => {
     const y = e.clientY - rect.top - size / 2;
 
     ripple.style.cssText = `
-                    width: ${size}px;
-                    height: ${size}px;
-                    left: ${x}px;
-                    top: ${y}px;
-                    position: absolute;
-                    border-radius: 50%;
-                    background: rgba(255, 255, 255, 0.3);
-                    transform: scale(0);
-                    animation: ripple 0.6s ease-out;
-                    pointer-events: none;
-                `;
+      width: ${size}px;
+      height: ${size}px;
+      left: ${x}px;
+      top: ${y}px;
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(0);
+      animation: ripple 0.6s ease-out;
+      pointer-events: none;
+    `;
 
-    this.style.position = "relative";
+    if (!this.style.position || this.style.position === "static") {
+      this.style.position = "relative";
+    }
     this.style.overflow = "hidden";
     this.appendChild(ripple);
 
@@ -164,74 +180,51 @@ document.querySelectorAll(".btn").forEach((button) => {
 });
 
 // Add ripple animation
-const style = document.createElement("style");
-style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-document.head.appendChild(style);
-
-// Counter animation for experience years
-function animateCounter(element, start, end, duration) {
-  let startTime = null;
-
-  function step(timestamp) {
-    if (!startTime) startTime = timestamp;
-    const progress = Math.min((timestamp - startTime) / duration, 1);
-    const current = Math.floor(progress * (end - start) + start);
-    element.textContent = current;
-
-    if (progress < 1) {
-      requestAnimationFrame(step);
-    }
-  }
-
-  requestAnimationFrame(step);
-}
-
-// Initialize counter when visible
-const experienceSection = document.querySelector("#experience");
-if (experienceSection) {
-  const counters = experienceSection.querySelectorAll("[data-count]");
-
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const target = entry.target;
-        const endValue = parseInt(target.getAttribute("data-count"));
-        animateCounter(target, 0, endValue, 2000);
-        counterObserver.unobserve(target);
+if (!document.querySelector("style[data-ripple]")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-ripple", "true");
+  style.textContent = `
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
       }
-    });
-  });
-
-  counters.forEach((counter) => {
-    counterObserver.observe(counter);
-  });
+    }
+  `;
+  document.head.appendChild(style);
 }
+
+// Parallax effect melhorado
+window.addEventListener("scroll", () => {
+  const elements = document.querySelectorAll("[data-parallax]");
+  elements.forEach((el) => {
+    const scrollPos = window.scrollY;
+    el.style.transform = `translateY(${scrollPos * 0.1}px)`;
+  });
+});
 
 // Easter egg - console message
-console.log(`
-        ╔══════════════════════════════════════════════════════════════╗
-        ║                                                              ║
-        ║   🚀 Olá! Você encontrou o console do desenvolvedor!        ║
-        ║                                                              ║
-        ║   Este portfólio foi criado com:                             ║
-        ║   • HTML5 & CSS3 moderno                                     ║
-        ║   • JavaScript Vanilla (sem frameworks!)                     ║
-        ║   • Animações CSS & Web APIs                                 ║
-        ║   • Design responsivo e acessível                            ║
-        ║                                                              ║
-        ║   Desenvolvido por Renan Rodrigues                           ║
-        ║   📧 renanrodrigues7110@gmail.com                           ║
-        ║   🔗 linkedin.com/in/renanrodrigues7110                     ║
-        ║                                                              ║
-        ╚══════════════════════════════════════════════════════════════╝
-        `);
+console.log(
+  `
+%c╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║   🚀 Olá! Você encontrou o console do desenvolvedor!        ║
+║                                                              ║
+║   Este portfólio foi criado com:                             ║
+║   • HTML5 & CSS3 moderno                                     ║
+║   • JavaScript Vanilla (sem frameworks!)                     ║
+║   • Animações CSS & Web APIs                                 ║
+║   • Design responsivo e acessível                            ║
+║   • Performance otimizada                                    ║
+║                                                              ║
+║   Desenvolvido por Renan Rodrigues                           ║
+║   📧 renanrodrigues7110@gmail.com                           ║
+║   🔗 linkedin.com/in/renanrodrigues7110                     ║
+║   💻 github.com/Renan-RodriguesDEV                          ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝`,
+  "color: #667eea; font-weight: bold; font-size: 12px;",
+);
 
 // Performance optimization - lazy loading for images
 if ("IntersectionObserver" in window) {
@@ -283,11 +276,45 @@ document.addEventListener("mousedown", function () {
 });
 
 // Add focus styles for keyboard navigation
-const focusStyle = document.createElement("style");
-focusStyle.textContent = `
-            .keyboard-navigation *:focus {
-                outline: 2px solid var(--accent-color) !important;
-                outline-offset: 2px !important;
-            }
-        `;
-document.head.appendChild(focusStyle);
+if (!document.querySelector("style[data-focus]")) {
+  const focusStyle = document.createElement("style");
+  focusStyle.setAttribute("data-focus", "true");
+  focusStyle.textContent = `
+    .keyboard-navigation *:focus {
+      outline: 2px solid var(--accent-color) !important;
+      outline-offset: 2px !important;
+    }
+  `;
+  document.head.appendChild(focusStyle);
+}
+
+// Back to Top Button functionality
+const backToTopButton = document.getElementById("backToTop");
+
+if (backToTopButton) {
+  // Show/hide button on scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add("show");
+    } else {
+      backToTopButton.classList.remove("show");
+    }
+  });
+
+  // Smooth scroll to top on click
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  // Prevent external scroll during animation
+  backToTopButton.addEventListener("mouseenter", function () {
+    this.style.transform = "translateY(-3px)";
+  });
+
+  backToTopButton.addEventListener("mouseleave", function () {
+    this.style.transform = "";
+  });
+}
