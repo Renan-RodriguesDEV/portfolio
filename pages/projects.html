@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projetos - Renan Rodrigues | Full Stack Engineer</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav-container">
+        <div class="logo">RR</div>
+        <ul class="nav-links">
+          <li><a href="../index.html#home">Início</a></li>
+          <li><a href="../index.html#about">Sobre</a></li>
+          <li><a href="../index.html#experience">Experiência</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#education">Formação</a></li>
+          <li><a href="../index.html#contact">Contato</a></li>
+        </ul>
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="projects">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Projetos Relevantes</h1>
+          <p class="hero-subtitle">
+            Full Stack | Machine Learning | Automação & RPA
+          </p>
+          <p class="hero-description">
+            Projetos de alta complexidade envolvendo arquiteturas escaláveis,
+            modelos de IA, automação robótica e integrações de pagamento em
+            produção.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects-list">
+      <h2 class="section-title fade-in">Portfólio de Projetos</h2>
+
+      <!-- Project 1 -->
+      <div class="project-detailed fade-in">
+        <div class="project-header-detailed">
+          <div class="project-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="project-info">
+            <h2>Sistema de Classificação de Carcaças (v2)</h2>
+            <p class="project-subtitle">
+              Rede Neural Convolucional com Pré-classificação e Dashboard Web
+            </p>
+            <span class="project-impact">
+              <i class="fas fa-chart-line"></i>
+              ~90% redução no tempo de análise
+            </span>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-content">
+            <h3>📋 Descrição Técnica</h3>
+            <p>
+              Sistema completo de classificação de carcaças bovinas utilizando
+              <strong>Redes Neurais Convolucionais (CNNs)</strong>. A solução
+              implementa um pipeline sofisticado de pré-processamento com
+              <strong>YOLO + PyTorch</strong> para detecção e descarte de
+              objetos irrelevantes, seguido de
+              <strong>TensorFlow/Keras</strong> para classificação em 4
+              categorias.
+            </p>
+
+            <h4>🔧 Pipeline Técnico:</h4>
+            <ul class="tech-pipeline">
+              <li>
+                <strong>Pré-classificação:</strong> ResNet (PyTorch) detecta e
+                descarta objetos inválidos
+              </li>
+              <li>
+                <strong>Processamento de Imagem:</strong> OpenCV + PIL para
+                recorte, normalização e tratamento de canais RGB
+              </li>
+              <li>
+                <strong>Detecção de Objetos:</strong> YOLO/Ultralytics para
+                validação de relevância
+              </li>
+              <li>
+                <strong>Classificação:</strong> CNN (TensorFlow) classifica em 4
+                classes com probabilidade e dimensionamento (px → metros)
+              </li>
+              <li>
+                <strong>Persistência:</strong> Dados e imagens armazenados em
+                PostgreSQL para auditoria
+              </li>
+            </ul>
+
+            <h4>🌐 Interface Web (Angular):</h4>
+            <ul class="tech-pipeline">
+              <li>Galeria de imagens classificadas com filtros avançados</li>
+              <li>Correção manual de classificações para retreinamento</li>
+              <li>
+                Classificação em tempo real via upload ou captura de câmera
+              </li>
+              <li>Dashboard com histórico e estatísticas de classificação</li>
+            </ul>
+
+            <h4>⚙️ Backend (FastAPI):</h4>
+            <ul class="tech-pipeline">
+              <li>Rotas assíncronas com validadores Pydantic</li>
+              <li>Autenticação JWT e autorização baseada em roles</li>
+              <li>ORM SQLAlchemy para operações em banco de dados</li>
+              <li>
+                Camadas bem definidas: Controllers, Services, Models,
+                Repositories
+              </li>
+              <li>Gerenciamento de dependências com UV</li>
+            </ul>
+
+            <h4>📊 Resultados & Impacto:</h4>
+            <p>
+              Redução de <strong>~90%</strong> no tempo de análise manual de
+              carcaças, aumentando significativamente a produtividade do
+              frigorífico. O sistema identifica automaticamente a classe de
+              carcaça (escassa, mediana, premium) e calcula dimensionamentos
+              precisos, gerando relatórios em tempo real.
+            </p>
+          </div>
+
+          <div class="project-sidebar">
+            <div class="tech-stack">
+              <h4>Stack Tecnológico</h4>
+              <div class="tech-tags-detailed">
+                <span class="tech-tag-ml">Python</span>
+                <span class="tech-tag-ml">TensorFlow/Keras</span>
+                <span class="tech-tag-ml">PyTorch</span>
+                <span class="tech-tag-ml">OpenCV</span>
+                <span class="tech-tag-ml">YOLO/Ultralytics</span>
+                <span class="tech-tag-ml">ResNet</span>
+                <span class="tech-tag-backend">FastAPI</span>
+                <span class="tech-tag-backend">Pydantic</span>
+                <span class="tech-tag-backend">SQLAlchemy</span>
+                <span class="tech-tag-backend">JWT</span>
+                <span class="tech-tag-db">PostgreSQL</span>
+                <span class="tech-tag-frontend">Angular.js</span>
+                <span class="tech-tag-tools">UV</span>
+                <span class="tech-tag-tools">NVM</span>
+              </div>
+            </div>
+
+            <div class="project-meta">
+              <div class="meta-item">
+                <i class="fas fa-code-branch"></i>
+                <div>
+                  <p>Repositório</p>
+                  <a
+                    href="https://github.com/Renan-RodriguesDEV/cnn-with-fastapi-angular"
+                    target="_blank"
+                  >
+                    Renan-RodriguesDEV/cnn-with-fastapi-angular
+                  </a>
+                </div>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-user"></i>
+                <div>
+                  <p>Papel</p>
+                  <p class="meta-value">Desenvolvedor Full Stack (Principal)</p>
+                </div>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-chart-pie"></i>
+                <div>
+                  <p>Categoria</p>
+                  <p class="meta-value">Machine Learning + Web</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-detailed fade-in">
+        <div class="project-header-detailed">
+          <div class="project-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <div class="project-info">
+            <h2>Plataforma E-commerce Full Stack</h2>
+            <p class="project-subtitle">
+              Sistema de Vendas e Compras para Varejo com IA integrada
+            </p>
+            <span class="project-impact">
+              <i class="fas fa-chart-line"></i>
+              ~80% redução em tempo operacional
+            </span>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-content">
+            <h3>📋 Descrição Técnica</h3>
+            <p>
+              Plataforma e-commerce completa desenvolvida como único
+              contribuidor, abrangendo desde o levantamento de requisitos até
+              deploy em produção. Sistema bidirecional permitindo tanto clientes
+              realizar compras quanto acesso administrativo para gerenciamento
+              de vendas, produtos e usuários.
+            </p>
+
+            <h4>💳 Backend (FastAPI):</h4>
+            <ul class="tech-pipeline">
+              <li>
+                <strong>API RESTful assíncrona</strong> com validadores Pydantic
+                e type hints
+              </li>
+              <li>
+                <strong>Autenticação:</strong> JWT com separação de roles
+                (Admin/Cliente) e criptografia BCrypt
+              </li>
+              <li>
+                <strong>Pagamentos:</strong> Integração com Mercado Pago
+                (cartão, PIX, boleto) via webhooks
+              </li>
+              <li>
+                <strong>Notificações:</strong> WebSocket para alerts em tempo
+                real (estoque, vencimentos)
+              </li>
+              <li>
+                <strong>Task Queue:</strong> RabbitMQ para processamento
+                assíncrono (envio de emails, relatórios)
+              </li>
+              <li>
+                <strong>Banco de Dados:</strong> PostgreSQL (Supabase) com ORM
+                SQLAlchemy e migrações via Alembic
+              </li>
+              <li>
+                <strong>Documentação:</strong> Swagger/OpenAPI integrada, logs
+                com Logging, formatação com Ruff
+              </li>
+              <li>
+                <strong>Gerenciamento:</strong> Dependências com UV, exceptions
+                customizadas
+              </li>
+            </ul>
+
+            <h4>🎨 Frontend (Next.js + TypeScript):</h4>
+            <ul class="tech-pipeline">
+              <li>
+                Interface moderna com <strong>Tailwind CSS</strong> para design
+                responsivo
+              </li>
+              <li>Gerenciamento de estado com React Hooks</li>
+              <li>Padrão de componentes reutilizáveis e services</li>
+              <li>
+                UX otimizada para vendedor e cliente com filtros avançados
+              </li>
+            </ul>
+
+            <h4>🤖 IA & Automação:</h4>
+            <ul class="tech-pipeline">
+              <li>
+                <strong>RAG Agents:</strong> LangChain com LLMs (Google
+                Generative AI, OpenAI) para atendimento inteligente ao cliente
+              </li>
+              <li>
+                <strong>Chatbot Conversacional:</strong> Agent de IA integrado
+                na plataforma web com contexto de pedidos e produtos
+              </li>
+              <li>
+                <strong>Code Assistance:</strong> Copilot + GitHub Codex para
+                aceleração do desenvolvimento
+              </li>
+            </ul>
+
+            <h4>🚀 DevOps & Deployment:</h4>
+            <ul class="tech-pipeline">
+              <li><strong>Containerização:</strong> Docker + Docker Compose</li>
+              <li>
+                <strong>CI/CD:</strong> GitHub Actions (testes automáticos,
+                build e deploy em VPS Oracle)
+              </li>
+              <li>
+                <strong>Testes:</strong> PyTest (unitários, integração,
+                automatizados) — pré-push validation
+              </li>
+            </ul>
+
+            <h4>👥 Funcionalidades por Role:</h4>
+            <div class="role-features">
+              <div class="role-box">
+                <strong>Cliente:</strong>
+                <ul>
+                  <li>Catálogo com filtros (nome, categoria, data)</li>
+                  <li>Carrinho de compras</li>
+                  <li>Checkout e pagamento integrado</li>
+                  <li>Solicitação de retirada</li>
+                  <li>Histórico de pedidos</li>
+                  <li>Gerenciamento de conta</li>
+                </ul>
+              </div>
+              <div class="role-box">
+                <strong>Admin:</strong>
+                <ul>
+                  <li>CRUD de vendas, produtos, usuários</li>
+                  <li>Dashboard com analytics</li>
+                  <li>Histórico e filtros de vendas (pagas/não pagas)</li>
+                  <li>Controle de estoque e vencimentos</li>
+                  <li>Relatórios detalhados</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4>📊 Resultados & Impacto:</h4>
+            <p>
+              Redução de <strong>~80%</strong> do tempo operacional tanto em
+              vendas quanto em compras, otimizando fluxo de trabalho para
+              vendedores e melhorando experiência de compra para clientes.
+              Sistema reduz erros manuais e integra pagamentos de forma segura e
+              transparente.
+            </p>
+          </div>
+
+          <div class="project-sidebar">
+            <div class="tech-stack">
+              <h4>Stack Tecnológico</h4>
+              <div class="tech-tags-detailed">
+                <span class="tech-tag-backend">FastAPI</span>
+                <span class="tech-tag-backend">Pydantic</span>
+                <span class="tech-tag-backend">SQLAlchemy</span>
+                <span class="tech-tag-backend">Alembic</span>
+                <span class="tech-tag-backend">JWT</span>
+                <span class="tech-tag-backend">BCrypt</span>
+                <span class="tech-tag-db">PostgreSQL</span>
+                <span class="tech-tag-db">Supabase</span>
+                <span class="tech-tag-frontend">Next.js</span>
+                <span class="tech-tag-frontend">TypeScript</span>
+                <span class="tech-tag-frontend">React Hooks</span>
+                <span class="tech-tag-frontend">Tailwind CSS</span>
+                <span class="tech-tag-ml">LangChain</span>
+                <span class="tech-tag-ml">Google Generative AI</span>
+                <span class="tech-tag-ml">LLMs</span>
+                <span class="tech-tag-tools">Docker</span>
+                <span class="tech-tag-tools">Docker Compose</span>
+                <span class="tech-tag-tools">GitHub Actions</span>
+                <span class="tech-tag-tools">RabbitMQ</span>
+                <span class="tech-tag-tools">WebSocket</span>
+                <span class="tech-tag-tools">Mercado Pago API</span>
+                <span class="tech-tag-tools">SMTP</span>
+                <span class="tech-tag-tools">Logging</span>
+                <span class="tech-tag-tools">Ruff</span>
+                <span class="tech-tag-tools">PyTest</span>
+                <span class="tech-tag-tools">UV</span>
+              </div>
+            </div>
+
+            <div class="project-meta">
+              <div class="meta-item">
+                <i class="fas fa-code-branch"></i>
+                <div>
+                  <p>Repositório</p>
+                  <a
+                    href="https://github.com/Renan-RodriguesDEV/bakery-fastapi"
+                    target="_blank"
+                  >
+                    Renan-RodriguesDEV/bakery-fastapi
+                  </a>
+                </div>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-user"></i>
+                <div>
+                  <p>Papel</p>
+                  <p class="meta-value">Full Stack (Único Contribuidor)</p>
+                </div>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-tasks"></i>
+                <div>
+                  <p>Responsabilidades</p>
+                  <p class="meta-value">
+                    Requisitos, Modelagem, Dev, Testes, DevOps
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-detailed fade-in">
+        <div class="project-header-detailed">
+          <div class="project-icon">
+            <i class="fas fa-cube"></i>
+          </div>
+          <div class="project-info">
+            <h2>Arquitetura de Microsserviços para Pagamentos</h2>
+            <p class="project-subtitle">
+              Integração de APIs de Pagamento via Message Queue
+            </p>
+            <span class="project-impact">
+              <i class="fas fa-wrench"></i>
+              Em Desenvolvimento
+            </span>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-content">
+            <h3>📋 Descrição Técnica</h3>
+            <p>
+              Arquitetura de microsserviços robusta desenvolvida em
+              <strong>Java com Spring Boot</strong>, focada em integração
+              descentralizada de APIs de pagamento através de
+              <strong>message queuing</strong>. O projeto implementa um padrão
+              de <strong>Event-Driven Architecture</strong> permitindo
+              comunicação assíncrona entre múltiplos serviços, garantindo
+              escalabilidade, resiliência e desacoplamento.
+            </p>
+
+            <h4>🏗️ Arquitetura de Microsserviços:</h4>
+            <ul class="tech-pipeline">
+              <li>
+                <strong>Publisher Service:</strong> Publica eventos de checkout
+                na fila, validando requisições iniciais
+              </li>
+              <li>
+                <strong>Consumer Service(s):</strong> Consome eventos e executa
+                operações de pagamento em paralelo
+              </li>
+              <li>
+                <strong>Event-Driven Pattern:</strong> Desacoplamento de
+                serviços via mensageria assíncrona
+              </li>
+              <li>
+                <strong>Retentability:</strong> Garantia de entrega de mensagens
+                com retry policies e dead letter queue
+              </li>
+              <li>
+                <strong>Idempotência:</strong> Processamento seguro de mensagens
+                duplicadas
+              </li>
+            </ul>
+
+            <h4>🔐 Segurança & Autenticação:</h4>
+            <ul class="tech-pipeline">
+              <li>
+                <strong>Spring Security:</strong> Autenticação e autorização em
+                rotas HTTP
+              </li>
+              <li>
+                <strong>JWT:</strong> Token-based authentication para chamadas
+                entre serviços
+              </li>
+              <li>
+                <strong>Criptografia:</strong> Dados sensíveis criptografados em
+                trânsito e em repouso
+              </li>
+              <li>
+                <strong>Validação:</strong> Validação robusta de payloads com
+                Bean Validation
+              </li>
+            </ul>
+
+            <h4>💳 Fluxo de Pagamento:</h4>
+            <ul class="tech-pipeline">
+              <li>
+                <strong>Checkout:</strong> Cliente inicia compra → Publisher
+                valida e publica evento
+              </li>
+              <li>
+                <strong>Validação:</strong> Consumer valida credenciais e método
+                de pagamento
+              </li>
+              <li>
+                <strong>Processamento:</strong> Chamadas a APIs de gateway de
+                pagamento (Stripe, Mercado Pago, etc.)
+              </li>
+              <li>
+                <strong>Confirmação:</strong> Eventos de sucesso/falha
+                publicados para atualizar estado
+              </li>
+              <li>
+                <strong>Auditoria:</strong> Logs detalhados de todas as
+                transações para compliance
+              </li>
+            </ul>
+
+            <h4>⚙️ Stack Backend (Java/Spring):</h4>
+            <ul class="tech-pipeline">
+              <li>
+                <strong>Spring Boot:</strong> Framework principal para
+                microsserviços
+              </li>
+              <li>
+                <strong>Spring Data JPA:</strong> ORM para persistência de dados
+              </li>
+              <li>
+                <strong>Spring Cloud:</strong> Service discovery, config server,
+                load balancing
+              </li>
+              <li>
+                <strong>RabbitMQ:</strong> Message broker para comunicação
+                assíncrona entre serviços
+              </li>
+              <li>
+                <strong>Spring AMQP:</strong> Abstração para trabalhar com
+                RabbitMQ
+              </li>
+              <li>
+                <strong>Spring Security:</strong> Framework completo de
+                segurança
+              </li>
+              <li>
+                <strong>Bean Validation:</strong> Validação de dados com
+                anotações
+              </li>
+            </ul>
+
+            <h4>📊 Padrões de Design Implementados:</h4>
+            <ul class="tech-pipeline">
+              <li>
+                <strong>Event Sourcing:</strong> Histórico completo de eventos
+                para auditoria
+              </li>
+              <li>
+                <strong>SAGA Pattern:</strong> Coordenação de transações
+                distribuídas
+              </li>
+              <li>
+                <strong>Circuit Breaker:</strong> Resilência e falha graciosa em
+                chamadas externas
+              </li>
+              <li>
+                <strong>Retry Pattern:</strong> Tentativas automáticas em caso
+                de falha
+              </li>
+              <li>
+                <strong>Repository Pattern:</strong> Abstração de acesso a dados
+              </li>
+            </ul>
+
+            <h4>📈 Benefícios da Arquitetura:</h4>
+            <p>
+              <strong>Escalabilidade Horizontal:</strong> Cada serviço pode
+              escalar independentemente. <strong>Resiliência:</strong> Falha em
+              um serviço não derruba o sistema inteiro.
+              <strong>Desacoplamento:</strong> Serviços podem ser desenvolvidos
+              e deployados independentemente.
+              <strong>Assincronia:</strong> Processamento de pagamentos não
+              bloqueia requisição do cliente.
+              <strong>Auditoria:</strong> Rastreamento completo de todas as
+              operações de pagamento.
+            </p>
+          </div>
+
+          <div class="project-sidebar">
+            <div class="tech-stack">
+              <h4>Stack Tecnológico</h4>
+              <div class="tech-tags-detailed">
+                <span class="tech-tag-backend">Java</span>
+                <span class="tech-tag-backend">Spring Boot</span>
+                <span class="tech-tag-backend">Spring Cloud</span>
+                <span class="tech-tag-backend">Spring Data JPA</span>
+                <span class="tech-tag-backend">Spring Security</span>
+                <span class="tech-tag-backend">Spring AMQP</span>
+                <span class="tech-tag-backend">JWT</span>
+                <span class="tech-tag-tools">RabbitMQ</span>
+                <span class="tech-tag-tools">Message Queue</span>
+                <span class="tech-tag-backend">Bean Validation</span>
+                <span class="tech-tag-db">PostgreSQL</span>
+                <span class="tech-tag-tools">Docker</span>
+                <span class="tech-tag-tools">Docker Compose</span>
+                <span class="tech-tag-tools">Kafka (alternativa)</span>
+                <span class="tech-tag-tools">API Gateway</span>
+              </div>
+            </div>
+
+            <div class="project-meta">
+              <div class="meta-item">
+                <i class="fas fa-code-branch"></i>
+                <div>
+                  <p>Repositórios</p>
+                  <a
+                    href="https://github.com/Renan-RodriguesDEV/microsservices.publisher"
+                    target="_blank"
+                  >
+                    microsservices.publisher
+                  </a>
+                  <a
+                    href="https://github.com/Renan-RodriguesDEV/microsservices.consumer"
+                    target="_blank"
+                    style="margin-top: 0.5rem; display: block"
+                  >
+                    microsservices.consumer
+                  </a>
+                </div>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-user"></i>
+                <div>
+                  <p>Papel</p>
+                  <p class="meta-value">Arquiteto & Desenvolvedor</p>
+                </div>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-chart-pie"></i>
+                <div>
+                  <p>Categoria</p>
+                  <p class="meta-value">Backend | Microsserviços</p>
+                </div>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-spinner"></i>
+                <div>
+                  <p>Status</p>
+                  <p class="meta-value" style="color: #f59e0b">
+                    Em Desenvolvimento
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section projects-cta">
+      <div class="cta-content fade-in">
+        <h2>Interessado em saber mais?</h2>
+        <p>
+          Explore meu GitHub para ver mais detalhes dos projetos e contribuições
+          em código aberto.
+        </p>
+        <div class="cta-buttons">
+          <a
+            href="https://github.com/Renan-RodriguesDEV"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            <i class="fab fa-github"></i>
+            Ver GitHub
+          </a>
+          <a href="../index.html#contact" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i>
+            Entre em Contato
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="social-links">
+          <a
+            href="https://github.com/Renan-RodriguesDEV"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/renanrodrigues7110"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:renanrodrigues7110@gmail.com" class="social-link">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+5519998722472" class="social-link">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.9rem">
+          © 2025 Renan Rodrigues. Desenvolvido com ❤️ e JavaScript vanilla.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Voltar ao topo">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

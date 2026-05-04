@@ -23,11 +23,10 @@
         <ul class="nav-links">
           <li><a href="#home">Início</a></li>
           <li><a href="#about">Sobre</a></li>
-          <li><a href="#skills">Habilidades</a></li>
           <li><a href="#experience">Experiência</a></li>
-          <li><a href="#highlights">Diferenciais</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#education">Formação</a></li>
-          <li><a href="#achievements">Reconhecimentos</a></li>
           <li><a href="#contact">Contato</a></li>
         </ul>
         <div class="mobile-menu">
@@ -39,32 +38,43 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="hero-content">
-        <h1 class="hero-title">Renan Rodrigues</h1>
-        <p class="hero-subtitle">
-          Software Engineer | Java & Python | Cloud & Automation Specialist
-        </p>
-        <p class="hero-description">
-          Engenheiro de Software com expertise em Java (Spring Boot) e Python
-          (FastAPI, Django, Flask), focado em arquiteturas distribuídas,
-          sistemas orientados a eventos (RabbitMQ/Redis), automação inteligente
-          (RPA/Scraping) e deploy escalável em Docker/Linux com Cloud.
-        </p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">
-            <i class="fas fa-envelope"></i>
-            Entre em Contato
-          </a>
-          <a href="#about" class="btn btn-secondary">
-            <i class="fas fa-user"></i>
-            Conheça mais
-          </a>
+        <div class="hero-profile">
+          <img
+            src="./assets/foto_de_perfil.png"
+            alt="Renan Rodrigues"
+            class="hero-profile-img"
+          />
+        </div>
+        <div class="hero-text">
+          <h1 class="hero-title">Renan Rodrigues</h1>
+          <p class="hero-subtitle">
+            Backend Software Engineer | Full Stack (AI, Data & RPA) | 3+ anos de
+            experiência
+          </p>
+          <p class="hero-description">
+            Especialista em sistemas escaláveis com Java/Spring Boot e
+            Python/FastAPI. Experiência prática em arquiteturas distribuídas,
+            pipelines de dados, modelos ML e automação inteligente.
+            <strong>Documentado:</strong> otimizações de latência (80%),
+            automações operacionais (80%) e visão computacional (90%).
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-briefcase"></i>
+              Ver Projetos
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fas fa-envelope"></i>
+              Entrar em Contato
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section class="section" id="about">
-      <h2 class="section-title fade-in">Sobre Mim</h2>
+      <h2 class="section-title fade-in">Sobre</h2>
       <div class="about-content fade-in">
         <div class="about-image">
           <div class="profile-img floating">
@@ -72,39 +82,46 @@
           </div>
         </div>
         <div class="about-text">
-          <h3>Resumo Profissional</h3>
+          <h3>Backend | Full Stack | Machine Learning</h3>
           <p>
-            Engenheiro de Software com sólida expertise nos ecossistemas
-            <strong>Java (Spring Boot)</strong> e
-            <strong>Python (FastAPI, Django, Flask)</strong>. Especialista no
-            desenvolvimento de arquiteturas distribuídas, sistemas orientados a
-            eventos e soluções de automação de alta complexidade com foco em
-            geração de valor para o negócio.
+            <strong>~3 anos de experiência</strong> em desenvolvimento backend
+            com Java/Spring Boot e Python/FastAPI. Trajetória evoluindo de Full
+            Stack para especialista em dados, IA e automação robótica (RPA).
+            Formação acadêmica em
+            <strong
+              >Análise e Desenvolvimento de Sistemas (média 9,4/10)</strong
+            >
+            com aplicação prática em projetos de alta complexidade.
           </p>
-          <p>
-            Experiência avançada em todo o ciclo de vida da aplicação: do
-            levantamento de requisitos e modelagem de dados complexos ao deploy
-            escalável em ambientes Docker/Linux e Cloud (GCP, AWS e VPS), com
-            foco rigoroso em Clean Architecture, SOLID e testes automatizados.
-          </p>
-          <ul>
+
+          <h4 style="margin-top: 1.5rem; color: var(--accent-color)">
+            Áreas de Atuação
+          </h4>
+          <ul style="margin-left: 1rem">
             <li>
-              <strong>Arquitetura e Backend:</strong> Spring Boot
-              (JPA/Hibernate), FastAPI, Django e design orientado a eventos com
-              mensageria e cache distribuído.
+              <strong>Backend & Arquitetura:</strong> APIs REST, microsserviços,
+              arquitetura orientada a eventos (RabbitMQ/Kafka), cache
+              distribuído (Redis).
             </li>
             <li>
-              <strong>Dados e IA:</strong> Pipelines de dados, treinamento e
-              deploy de modelos com Scikit-learn, TensorFlow, PyTorch, LangChain
-              e visão computacional.
+              <strong>Engenharia de Dados:</strong> Pipelines ETL, SQL avançado
+              (CTEs, window functions, triggers), otimização de queries
+              (resultados: ~80% redução em latência).
             </li>
             <li>
-              <strong>Automação e RPA:</strong> Robot Framework, Playwright,
-              Selenium e OpenCV para automações robustas em cenários reais.
+              <strong>Machine Learning & IA:</strong> TensorFlow/PyTorch, visão
+              computacional (OpenCV, YOLO), LangChain/RAG, processamento de
+              grandes volumes de dados.
             </li>
             <li>
-              <strong>DevOps e Infra:</strong> Docker, CI/CD, Nginx, Linux, GCP,
-              AWS e administração de VPS com foco em resiliência e segurança.
+              <strong>Automação & RPA:</strong> Robot Framework, Playwright,
+              Selenium — automações complexas em ambientes reais (resultado:
+              ~80% redução de processos manuais).
+            </li>
+            <li>
+              <strong>DevOps & Cloud:</strong> Docker/Docker-compose, CI/CD
+              (GitHub Actions), GCP/AWS, VPS, Nginx — deploy em produção com
+              foco em segurança e resiliência.
             </li>
           </ul>
         </div>
@@ -113,125 +130,82 @@
 
     <!-- Skills Section -->
     <section class="section" id="skills">
-      <h2 class="section-title fade-in">Habilidades Técnicas</h2>
+      <h2 class="section-title fade-in">Competências Técnicas</h2>
       <div class="skills-grid">
         <div class="skill-category fade-in">
-          <h3><i class="fas fa-code"></i> Linguagens</h3>
+          <h3><i class="fas fa-star"></i> Backend & APIs</h3>
           <div class="skill-tags">
-            <span class="skill-tag">Java (sólida experiência)</span>
-            <span class="skill-tag">Python (sólida experiência)</span>
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Go</span>
-            <span class="skill-tag">C#</span>
-            <span class="skill-tag">TypeScript</span>
-          </div>
-        </div>
-
-        <div class="skill-category fade-in">
-          <h3><i class="fas fa-sitemap"></i> Arquitetura & Padrões</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Clean Architecture</span>
-            <span class="skill-tag">Layered Architecture</span>
-            <span class="skill-tag">Design Patterns (GoF)</span>
-            <span class="skill-tag">MVC</span>
-            <span class="skill-tag">Clean Code</span>
-            <span class="skill-tag">Domain-Driven Design (DDD)</span>
-          </div>
-        </div>
-
-        <div class="skill-category fade-in">
-          <h3><i class="fas fa-server"></i> Backend & APIs</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Java (Spring Boot)</span>
-            <span class="skill-tag">Python (FastAPI, Django, Flask)</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">Vue.js</span>
-            <span class="skill-tag">React Native</span>
-            <span class="skill-tag">RESTful APIs</span>
+            <span class="skill-tag">Java / Spring Boot</span>
+            <span class="skill-tag">Python / FastAPI / Flask</span>
+            <span class="skill-tag">REST APIs</span>
             <span class="skill-tag">Microsserviços</span>
-            <span class="skill-tag">Event-Driven</span>
-            <span class="skill-tag">Multithreading</span>
+            <span class="skill-tag">Event-Driven Architecture</span>
+            <span class="skill-tag">JWT & OAuth2</span>
           </div>
         </div>
 
         <div class="skill-category fade-in">
-          <h3><i class="fas fa-robot"></i> Automação & RPA</h3>
+          <h3><i class="fas fa-database"></i> Dados & SQL</h3>
           <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL / MySQL</span>
+            <span class="skill-tag">SQL Avançado (CTEs, Window Functions)</span>
+            <span class="skill-tag">JPA / SQLAlchemy</span>
+            <span class="skill-tag">Pipelines ETL</span>
+            <span class="skill-tag">Pandas / NumPy</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in">
+          <h3><i class="fas fa-robot"></i> Machine Learning & Automação</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">TensorFlow / PyTorch</span>
+            <span class="skill-tag">OpenCV / YOLOv8</span>
+            <span class="skill-tag">LangChain / RAG</span>
             <span class="skill-tag">Robot Framework</span>
-            <span class="skill-tag">Playwright</span>
-            <span class="skill-tag">Selenium</span>
-            <span class="skill-tag">BotCity</span>
-            <span class="skill-tag">PyAutoGUI</span>
-            <span class="skill-tag">OpenCV</span>
-            <span class="skill-tag">Web Scraping</span>
-            <span class="skill-tag">Desktop Scraping</span>
-            <span class="skill-tag">Process Automation</span>
+            <span class="skill-tag">Selenium / Playwright</span>
+            <span class="skill-tag">Web & Desktop Scraping</span>
           </div>
         </div>
 
         <div class="skill-category fade-in">
-          <h3><i class="fas fa-brain"></i> Machine Learning & IA</h3>
+          <h3><i class="fas fa-cloud"></i> DevOps & Infraestrutura</h3>
           <div class="skill-tags">
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">TensorFlow/Keras</span>
-            <span class="skill-tag">YOLOv8 (Ultralytics)</span>
-            <span class="skill-tag">CNN/Deep Learning</span>
-            <span class="skill-tag">LangChain & RAG</span>
-            <span class="skill-tag">Google Generative AI</span>
-            <span class="skill-tag">Scikit-learn</span>
-            <span class="skill-tag">Pandas/NumPy</span>
+            <span class="skill-tag">Docker / Docker-Compose</span>
+            <span class="skill-tag">GitHub Actions (CI/CD)</span>
+            <span class="skill-tag">Google Cloud Platform</span>
+            <span class="skill-tag">AWS (EC2, RDS, S3, Lambda)</span>
+            <span class="skill-tag">Nginx / Linux</span>
+            <span class="skill-tag">VPS Management</span>
           </div>
         </div>
 
         <div class="skill-category fade-in">
-          <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+          <h3><i class="fas fa-code"></i> Linguagens Adicionais</h3>
           <div class="skill-tags">
-            <span class="skill-tag">Google Cloud (GCP)</span>
-            <span class="skill-tag">AWS (EC2, RDS, S3, Lambda, IAM)</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Docker-compose</span>
-            <span class="skill-tag">CI/CD (GitHub Actions)</span>
-            <span class="skill-tag">VPS</span>
-            <span class="skill-tag">Nginx</span>
-            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">JavaScript / TypeScript</span>
+            <span class="skill-tag">React / Next.js / Angular</span>
+            <span class="skill-tag">C / C++</span>
+            <span class="skill-tag">C# (.NET)</span>
+            <span class="skill-tag">Go</span>
           </div>
         </div>
 
         <div class="skill-category fade-in">
-          <h3><i class="fas fa-database"></i> Bancos de Dados</h3>
+          <h3><i class="fas fa-check-circle"></i> Qualidade & Metodologias</h3>
           <div class="skill-tags">
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">Firebase</span>
-            <span class="skill-tag">SQL Avançado</span>
-            <span class="skill-tag">Window Functions / CTEs / Triggers</span>
-            <span class="skill-tag">SQLAlchemy</span>
-            <span class="skill-tag">JPA</span>
-            <span class="skill-tag">JDBC / PyMySQL (Native SQL)</span>
-          </div>
-        </div>
-
-        <div class="skill-category fade-in">
-          <h3><i class="fas fa-tools"></i> Ferramentas & Qualidade</h3>
-          <div class="skill-tags">
+            <span class="skill-tag">Clean Code / SOLID</span>
+            <span class="skill-tag">Testes Unitários & Integração</span>
+            <span class="skill-tag">PyTest / JUnit</span>
             <span class="skill-tag">Git</span>
-            <span class="skill-tag">Testes Unitários</span>
-            <span class="skill-tag">Testes de Integração</span>
-            <span class="skill-tag">PyTest</span>
-            <span class="skill-tag">JUnit</span>
-            <span class="skill-tag">Scrum</span>
-            <span class="skill-tag">Kanban</span>
+            <span class="skill-tag">Scrum / Kanban</span>
           </div>
         </div>
 
         <div class="skill-category fade-in">
-          <h3><i class="fas fa-comments"></i> Mensageria & Cache</h3>
+          <h3><i class="fas fa-exchange-alt"></i> Mensageria & Cache</h3>
           <div class="skill-tags">
             <span class="skill-tag">RabbitMQ</span>
+            <span class="skill-tag">Kafka</span>
             <span class="skill-tag">Redis</span>
           </div>
         </div>
@@ -245,9 +219,7 @@
       <div class="experience-item fade-in">
         <div class="experience-header">
           <div>
-            <h3 class="experience-title">
-              Software Engineer Jr / Machine Learning Engineer
-            </h3>
+            <h3 class="experience-title">Software Engineer</h3>
             <p class="experience-company">vj-bots</p>
           </div>
           <span class="experience-period">Fev 2025 - Abr 2026</span>
@@ -255,19 +227,21 @@
         <div class="experience-description">
           <ul>
             <li>
-              <strong>Arquitetura de Sistemas:</strong> Design e implementação
-              de APIs escaláveis com Spring Boot e FastAPI, integrando
-              mensageria assíncrona com RabbitMQ e cache com Redis.
+              <strong>Backend & Arquitetura:</strong> Desenvolvimento de APIs
+              REST escaláveis com Spring Boot e FastAPI. Implementação de
+              mensageria assíncrona (RabbitMQ/Kafka) e cache distribuído
+              (Redis). Resultado: redução de latência em
+              <strong>~80%</strong> em operações críticas.
             </li>
             <li>
-              <strong>Engenharia de Dados & ML:</strong> Desenvolvimento de
-              pipelines de dados e modelos de Deep Learning (CNNs), além da
-              aplicação de LangChain para agentes de IA.
+              <strong>Engenharia de Dados & ML:</strong> Construção de pipelines
+              ETL, otimização de queries SQL avançadas (CTEs, window functions),
+              integração de modelos de Deep Learning (CNNs) e LLMs com RAG.
             </li>
             <li>
-              <strong>DevOps & Cloud:</strong> Gestão de deploy em GCP, AWS e
-              VPS utilizando Docker e Nginx com foco em resiliência, segurança e
-              SSL.
+              <strong>DevOps & CI/CD:</strong> Configuração de pipelines
+              automatizados com GitHub Actions. Deploy em GCP, AWS e VPS usando
+              Docker, Nginx com SSL e foco em segurança.
             </li>
           </ul>
         </div>
@@ -284,19 +258,21 @@
         <div class="experience-description">
           <ul>
             <li>
-              <strong>Desenvolvimento Web:</strong> Construção de interfaces
-              dinâmicas com Next.js/React e back-ends robustos para gestão
-              interna e integração de serviços.
+              <strong>Desenvolvimento Full Stack:</strong> Backend com
+              Java/Spring Boot e Python/FastAPI. Frontend com Next.js/React.
+              Integração de APIs externas e sincronização de dados entre
+              sistemas.
             </li>
             <li>
-              <strong>Banco de Dados:</strong> Modelagem relacional e otimização
-              de queries complexas em PostgreSQL/MySQL, com foco em integridade
-              e performance.
+              <strong>Otimização de Banco de Dados:</strong> Modelagem
+              relacional avançada e otimização de queries. Resultado:
+              <strong>~30% de melhoria em performance</strong> em consultas
+              críticas.
             </li>
             <li>
-              <strong>Qualidade de Software:</strong> Aplicação de Clean
-              Code/SOLID e implementação de testes unitários e de integração com
-              JUnit e PyTest.
+              <strong>Testes & Qualidade:</strong> Implementação de testes
+              unitários e de integração com JUnit (Java) e PyTest (Python).
+              Aplicação de Clean Code e SOLID principles.
             </li>
           </ul>
         </div>
@@ -313,110 +289,172 @@
         <div class="experience-description">
           <ul>
             <li>
-              <strong>Automação (RPA):</strong> Desenvolvimento de bots com
-              Robot Framework, Selenium e Playwright para automatização de
-              processos repetitivos e redução de erros operacionais.
+              <strong>Automação & RPA:</strong> Desenvolvimento de bots com
+              Robot Framework, Selenium e Playwright para processos repetitivos.
+              Resultado: <strong>~80% redução de esforço manual</strong> em
+              operações.
             </li>
             <li>
-              <strong>Engenharia de Scripts:</strong> Criação de scripts Python
-              para extração, tratamento e filtragem de grandes datasets com
-              Pandas/OpenPyXL.
+              <strong>Engenharia de Scripts:</strong> ETL com Pandas para
+              extração, tratamento e filtragem de grandes datasets. Integração
+              de dados entre sistemas heterogêneos.
             </li>
             <li>
-              <strong>Suporte Técnico:</strong> Manutenção preventiva em bases
-              de dados e apoio na documentação técnica de requisitos e propostas
-              para clientes.
+              <strong>Suporte Técnico:</strong> Manutenção preventiva de bases
+              de dados, documentação técnica e levantamento de requisitos com
+              clientes.
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Highlights Section -->
-    <section class="section" id="highlights">
-      <h2 class="section-title fade-in">Diferenciais & Projetos Relevantes</h2>
-      <div class="education-content">
-        <div class="education-item fade-in">
-          <h3>Especialista Full-Cycle</h3>
-          <p>
-            Atuação do desenvolvimento de baixo nível (C/C++) e sistemas
-            embarcados ao gerenciamento de infraestrutura Cloud/VPS.
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <h2 class="section-title fade-in">Projetos Relevantes</h2>
+      <div class="projects-grid">
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Plataforma E-commerce Full-Cycle</h3>
+          </div>
+          <p class="project-description">
+            Backend com FastAPI, JWT authentication, integração com Mercado Pago
+            (webhooks) e WebSocket para notificações em tempo real. Deploy com
+            Docker e CI/CD em Oracle Cloud.
           </p>
-        </div>
-        <div class="education-item fade-in">
-          <h3>Versatilidade Tecnológica</h3>
-          <p>
-            Adaptação rápida a novas linguagens e paradigmas, com experiência em
-            projetos de alta performance e manipulação direta de recursos.
+          <p class="project-result">
+            <strong>Resultado:</strong> ~80% redução em esforço operacional
+            manual
           </p>
+          <div class="project-tags">
+            <span>FastAPI</span>
+            <span>JWT</span>
+            <span>WebSocket</span>
+            <span>Docker</span>
+            <span>CI/CD</span>
+          </div>
         </div>
-        <div class="education-item fade-in">
-          <h3>Automação com IA</h3>
-          <p>
-            Implementação de bots com visão computacional (OpenCV) e NLP
-            aplicados em cenários reais de frigoríficos e logística.
+
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <i class="fas fa-eye"></i>
+            <h3>Sistema de Visão Computacional</h3>
+          </div>
+          <p class="project-description">
+            Pipeline end-to-end: coleta de dados com Selenium, processamento com
+            OpenCV, classificação com YOLO e CNN (TensorFlow). Integração com
+            API e automação de relatórios.
           </p>
-        </div>
-        <div class="education-item fade-in">
-          <h3>Engenharia de Software</h3>
-          <p>
-            Domínio de padrões de projeto e arquiteturas modernas para sistemas
-            robustos, escaláveis e testáveis.
+          <p class="project-result">
+            <strong>Resultado:</strong> ~90% redução no tempo de análise manual
           </p>
+          <div class="project-tags">
+            <span>OpenCV</span>
+            <span>YOLO</span>
+            <span>TensorFlow</span>
+            <span>Selenium</span>
+            <span>Automation</span>
+          </div>
         </div>
+      </div>
+      <div class="projects-cta fade-in">
+        <p>Interesse em saber mais sobre meus projetos?</p>
+        <a href="./pages/projects.html" class="btn btn-primary">
+          <i class="fas fa-folder-open"></i>
+          Ver Todos os Projetos
+        </a>
       </div>
     </section>
 
     <!-- Education Section -->
     <section class="section" id="education">
-      <h2 class="section-title fade-in">Formação & Idiomas</h2>
+      <h2 class="section-title fade-in">Formação Acadêmica</h2>
       <div class="education-content">
         <div class="education-item fade-in">
           <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
-          <p>Centro Universitário UnEduvale - Avaré</p>
+          <p class="education-school">Centro Universitário UnEduvale - Avaré</p>
+          <p class="education-detail">
+            <strong>Desempenho:</strong> Média geral 9,4/10 — Menção Honrosa
+          </p>
+          <p class="education-detail" style="margin-top: 0.5rem">
+            <strong>Reconhecimentos:</strong> Mérito Científico em Sistemas
+            Integrados (CONINCE 2025) e Sistemas Embarcados (CONINCE 2025)
+          </p>
         </div>
+
         <div class="education-item fade-in">
-          <h3>Inglês</h3>
-          <p>Nível A2 (Leitura técnica, documentação e escrita de código).</p>
+          <h3>Idiomas</h3>
+          <ul style="margin-top: 0.5rem; margin-left: 1rem">
+            <li><strong>Português:</strong> Nativo</li>
+            <li>
+              <strong>Inglês:</strong> A2 — Leitura técnica, documentação e
+              escrita de código
+            </li>
+            <li><strong>Espanhol:</strong> Básico</li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    <!-- Achievements Section -->
-    <section class="section" id="achievements">
-      <h2 class="section-title fade-in">Reconhecimentos Acadêmicos</h2>
-      <div class="education-content">
-        <div class="education-item fade-in">
-          <h3>Menção Honrosa</h3>
-          <p>
-            Melhor desempenho geral do curso de Análise e Desenvolvimento de
-            Sistemas (média 9,4).
-          </p>
-        </div>
-        <div class="education-item fade-in">
-          <h3>Mérito Científico</h3>
-          <p>
-            Melhor trabalho na área de Exatas e Tecnologia (Sistema Integrado
-            para Padarias com Controle de Vendas e Pagamentos Digitais).
-          </p>
-        </div>
-        <div class="education-item fade-in">
-          <h3>Mérito Científico - Sistemas Embarcados</h3>
-          <p>
-            Sistema de Navegação com Controle Remoto para Motor Elétrico Phantom
-            44lb, apresentado no XVIII Congresso de Iniciação Científica (2025).
-          </p>
+      <!-- Achievements Gallery -->
+      <div class="achievements-gallery fade-in">
+        <h3
+          style="
+            text-align: center;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+          "
+        >
+          Certificações & Reconhecimentos Acadêmicos
+        </h3>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <img
+              src="./assets/mencao_honrosa.jpg"
+              alt="Menção Honrosa - Melhor Desempenho Acadêmico"
+              class="achievement-img"
+            />
+            <p class="achievement-label">
+              Menção Honrosa<br /><small
+                >Melhor Desempenho Acadêmico (9,4/10)</small
+              >
+            </p>
+          </div>
+          <div class="achievement-card">
+            <img
+              src="./assets/merito_sistema_web.jpg"
+              alt="Mérito Científico - Sistema Integrado para Padarias"
+              class="achievement-img"
+            />
+            <p class="achievement-label">
+              Mérito Científico<br /><small
+                >Sistema Integrado para Padarias</small
+              >
+            </p>
+          </div>
+          <div class="achievement-card">
+            <img
+              src="./assets/merito_sistema_embarcado.jpg"
+              alt="Mérito Científico - Sistemas Embarcados"
+              class="achievement-img"
+            />
+            <p class="achievement-label">
+              Mérito Científico<br /><small
+                >Sistemas Embarcados com Controle Remoto</small
+              >
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section class="section" id="contact">
-      <h2 class="section-title fade-in">Vamos Trabalhar Juntos</h2>
+      <h2 class="section-title fade-in">Entre em Contato</h2>
       <div class="contact-content">
         <div class="contact-info fade-in">
-          <h3 style="color: var(--text-primary); margin-bottom: 2rem">
-            Informações de Contato
+          <h3 style="color: var(--text-primary); margin-bottom: 1.5rem">
+            Canais de Comunicação
           </h3>
 
           <div class="contact-item">
@@ -444,16 +482,6 @@
                   >(19) 99872-2472</a
                 >
               </p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-details">
-              <h4>Localização</h4>
-              <p>São Paulo, Brasil (Disponível para Remoto)</p>
             </div>
           </div>
 
@@ -489,20 +517,21 @@
 
           <div class="contact-item">
             <div class="contact-icon">
-              <i class="fas fa-globe"></i>
+              <i class="fas fa-map-marker-alt"></i>
             </div>
             <div class="contact-details">
-              <h4>Portfólio</h4>
+              <h4>Localização</h4>
               <p>
-                <a href="#home">renanrodrigues.dev/portfolio</a>
+                São Paulo, Brasil | Disponível para Remoto, Presencial ou
+                Híbrido
               </p>
             </div>
           </div>
         </div>
 
         <div class="contact-form fade-in">
-          <h3 style="color: var(--text-primary); margin-bottom: 2rem">
-            Envie uma Mensagem
+          <h3 style="color: var(--text-primary); margin-bottom: 1.5rem">
+            Deixe uma Mensagem
           </h3>
           <form id="contactForm">
             <div class="form-group">
@@ -519,11 +548,16 @@
             </div>
             <div class="form-group">
               <label for="message">Mensagem</label>
-              <textarea id="message" name="message" required></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
             </div>
             <button type="submit" class="btn btn-primary">
               <i class="fas fa-paper-plane"></i>
-              Enviar Mensagem
+              Enviar
             </button>
           </form>
         </div>
